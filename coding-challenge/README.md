@@ -1,73 +1,61 @@
-# React + TypeScript + Vite
+🏗️ Challenge: Infrastructure Dashboard Refactoring
+Welcome to your trial day! We are excited to have you here.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. The Situation
+In this repository, you will find a prototype for an infrastructure analytics dashboard used for structural inspections. The current code (src/AnalysisDashboard.tsx) was built under time pressure. While it works technically, the architecture is unstable, difficult to test, and does not scale.
 
-Currently, two official plugins are available:
+2. Your Mission
+Your task is to transform this prototype into a production-ready frontend architecture. We are looking for someone who takes responsibility for code quality and proactively suggests clean solutions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+3. Task Packages
+A) Refactoring & Architecture
+Separation of Concerns: Decouple business logic (API calls, calculations) from the UI presentation.
 
-## React Compiler
+Modularization: Break down the large file into small, reusable components (e.g., /components, /hooks).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+State Management: Optimize how data and filters are handled within the application.
 
-## Expanding the ESLint configuration
+B) TypeScript & Data Modeling
+Remove all any types.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Create clean interfaces for our domain entities (Structure/Bauwerk, Area, Grade, Status).
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+C) Modern UI/UX with TailwindCSS
+Replace the current inline styling with a consistent design using TailwindCSS.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Implement loading states and basic error handling (e.g., what happens if the API returns an error?).
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+D) Professional Visualization
+The current bar display for "Grades" in the sidebar is a temporary fix.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Implement a professional visualization (e.g., using a library of your choice like Recharts, Chart.js, etc.) that would be meaningful for an engineer.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+E) REST API Integration (Focus Task)
+Abstract the communication with the backend. Create an API service layer that interacts with the following (simulated) endpoints:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+GET /api/v1/structures: Fetches the list of structures.
+
+PATCH /api/v1/structures/{id}: Updates the status of a specific structure.
+
+Requirement: The service should be future-proof (centralized Base-URL, prepared for Auth-headers/Bearer tokens).
+
+4. Technical Stack
+Framework: React with Vite & TypeScript.
+
+Styling: TailwindCSS (pre-installed).
+
+Libraries: You are free to add additional libraries (Charts, Icons, API clients). Please briefly justify your choice during the presentation.
+
+5. Setup
+npm install
+
+npm run dev
+
+6. What we look for (Evaluation Criteria)
+Clean Code: How readable and maintainable is your code?
+
+Independence: How do you handle ambiguous requirements? (Collecting questions vs. constant interruptions).
+
+Domain Understanding: How do you handle technical data (e.g., formatting grades/areas)?
+
+Potential for Relief: Would I feel confident pushing this code to production tomorrow?
