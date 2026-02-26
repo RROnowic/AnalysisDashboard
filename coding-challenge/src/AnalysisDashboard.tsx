@@ -8,13 +8,15 @@ export default function AnalysisDashboard() {
 
   useEffect(() => {
     setLoading(true);
-    // Simulation eines API-Calls mit euren spezifischen Daten
+    // Data
     const mockData = [
       { id: 1, name: 'Rheinbrücke A1', area: 12500, grade: 2.1, status: 'active' },
       { id: 2, name: 'Tunnel Westportal', area: 4200, grade: 3.4, status: 'warning' },
       { id: 3, name: 'Talbrücke Nord', area: 8900, grade: 1.8, status: 'active' },
       { id: 4, name: 'Überführung K40', area: 1100, grade: 4.0, status: 'critical' },
       { id: 5, name: 'Mainsteg Ost', area: 2500, grade: 2.5, status: 'active' },
+      { id: 7, name: 'None', area: 0, grade: 0, status: 'inactive' },
+
     ];
     
     setTimeout(() => {
@@ -27,7 +29,7 @@ export default function AnalysisDashboard() {
     item.name.toLowerCase().includes(filter.toLowerCase())
   );
 
-  // Unsaubere Berechnung des Durchschnitts-Grades direkt im Render
+  // Calculation
   let sum = 0;
   filteredData.forEach((i: any) => sum += i.grade);
   const avgGrade = sum / filteredData.length;
@@ -51,7 +53,6 @@ export default function AnalysisDashboard() {
       </div>
 
       <div style={{ display: 'flex', gap: '20px' }}>
-        {/* Seitenleiste mit "hässlicher" Visualisierung */}
         <div style={{ width: '250px', background: '#eee', padding: '15px' }}>
           <h3>KPIs</h3>
           <p>Anzahl: {filteredData.length}</p>
@@ -60,7 +61,6 @@ export default function AnalysisDashboard() {
           <hr />
           
           <h4>Zustands-Visualisierung</h4>
-          {/* Das hier ist absichtlich schlecht gebaut - er soll eine Chart-Library nutzen */}
           {filteredData.map((i: any) => (
             <div key={i.id} style={{ marginBottom: '10px' }}>
               <small>{i.name}</small>
@@ -75,7 +75,7 @@ export default function AnalysisDashboard() {
           ))}
         </div>
 
-        {/* Haupt-Tabelle */}
+        {/* Table */}
         <div style={{ flex: '1' }}>
           <table style={{ width: '100%', borderCollapse: 'collapse' }}>
             <thead>

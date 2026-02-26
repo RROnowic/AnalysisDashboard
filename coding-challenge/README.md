@@ -37,7 +37,7 @@ GET /api/v1/structures: Fetches the list of structures.
 
 PATCH /api/v1/structures/{id}: Updates the status of a specific structure.
 
-Requirement: The service should be future-proof (centralized Base-URL, prepared for Auth-headers/Bearer tokens).
+Requirement: The service should be future-proof.
 
 4. Technical Stack
 Framework: React with Vite & TypeScript.
@@ -54,8 +54,8 @@ npm run dev
 6. What we look for (Evaluation Criteria)
 Clean Code: How readable and maintainable is your code?
 
-Independence: How do you handle ambiguous requirements? (Collecting questions vs. constant interruptions).
+Independence: How do you handle ambiguous requirements?
 
-Domain Understanding: How do you handle technical data (e.g., formatting grades/areas)?
+Domain Understanding: How do you handle technical data?
 
 Potential for Relief: Would I feel confident pushing this code to production tomorrow?
