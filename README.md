@@ -1,2 +1,0 @@
-# AnalysisDashboard
-A test dashboard
