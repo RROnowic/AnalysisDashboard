@@ -1,61 +1,69 @@
-🏗️ Challenge: Infrastructure Dashboard Refactoring
-Welcome to your trial day! We are excited to have you here.
+🏗️ Trial Day Challenge: Infrastructure Dashboard Refactoring
+Welcome to our team! We are excited to see your approach to modern frontend architecture.
 
-1. The Situation
-In this repository, you will find a prototype for an infrastructure analytics dashboard used for structural inspections. The current code (src/AnalysisDashboard.tsx) was built under time pressure. While it works technically, the architecture is unstable, difficult to test, and does not scale.
+📖 1. The Situation
+In this repository, you will find a prototype for an Infrastructure Analytics Dashboard used for structural inspections (e.g., bridges and tunnels).
 
-2. Your Mission
-Your task is to transform this prototype into a production-ready frontend architecture. We are looking for someone who takes responsibility for code quality and proactively suggests clean solutions.
+The current code (src/AnalysisDashboard.tsx) was built under time pressure. While it works technically, the architecture is unstable, difficult to test, and does not scale. It is a classic "Single-File-Spaghetti" component.
 
-3. Task Packages
+🎯 2. Your Mission
+Your task is to transform this prototype into a production-ready frontend architecture. We are looking for a developer who takes ownership of code quality and proactively suggests clean, maintainable solutions.
+
+🛠️ 3. Task Packages
 A) Refactoring & Architecture
-Separation of Concerns: Decouple business logic (API calls, calculations) from the UI presentation.
+Separation of Concerns: Decouple business logic (API calls, data transformations) from the UI presentation.
 
-Modularization: Break down the large file into small, reusable components (e.g., /components, /hooks).
+Modularization: Break down the large file into small, reusable components (e.g., /components, /hooks, /services).
 
-State Management: Optimize how data and filters are handled within the application.
+State Management: Clean up how data and UI filters are handled.
 
 B) TypeScript & Data Modeling
 Remove all any types.
 
-Create clean interfaces for our domain entities (Structure/Bauwerk, Area, Grade, Status).
+Define robust interfaces for our domain entities: Structure, Area, Grade, and Status.
 
 C) Modern UI/UX with TailwindCSS
-Replace the current inline styling with a consistent design using TailwindCSS.
+Replace all inline styles with a consistent TailwindCSS implementation.
 
-Implement loading states and basic error handling (e.g., what happens if the API returns an error?).
+Improve user feedback: Add loading states and basic error handling.
 
 D) Professional Visualization
-The current bar display for "Grades" in the sidebar is a temporary fix.
+The current bar display for "Grades" is a temporary hack.
 
-Implement a professional visualization (e.g., using a library of your choice like Recharts, Chart.js, etc.) that would be meaningful for an engineer.
+Implement a professional visualization (using a library like Recharts or Chart.js) that provides real value for an engineer.
 
-E) REST API Integration (Focus Task)
-Abstract the communication with the backend. Create an API service layer that interacts with the following (simulated) endpoints:
+E) REST API Integration
+Abstract the communication with our backend. Create a service layer for the following simulated endpoints:
 
-GET /api/v1/structures: Fetches the list of structures.
+GET /api/v1/structures: Fetch the list of objects.
 
-PATCH /api/v1/structures/{id}: Updates the status of a specific structure.
+PATCH /api/v1/structures/{id}: Update a structure's status.
 
-Requirement: The service should be future-proof.
+Requirement: Ensure the service is future-proof (e.g., centralized Base-URL, prepared for Auth headers).
 
-4. Technical Stack
-Framework: React with Vite & TypeScript.
+💻 4. Technical Stack
+Framework: React (Vite + TypeScript)
 
-Styling: TailwindCSS (pre-installed).
+Styling: TailwindCSS (pre-installed)
 
-Libraries: You are free to add additional libraries (Charts, Icons, API clients). Please briefly justify your choice during the presentation.
+Libraries: You are free to add libraries for Charts, Icons, or API clients. Be prepared to justify your choices.
 
-5. Setup
+🚀 5. Setup
+Bash
+# Install dependencies
 npm install
 
+# Start the development server
 npm run dev
+📈 6. Evaluation Criteria
+We will review your results at 2:30 PM. We are specifically looking for:
 
-6. What we look for (Evaluation Criteria)
-Clean Code: How readable and maintainable is your code?
+Clean Code: Is the code readable and follow "Don't Repeat Yourself" (DRY) principles?
 
-Independence: How do you handle ambiguous requirements?
+Independence: Did you find solutions for ambiguous requirements on your own?
 
-Domain Understanding: How do you handle technical data?
+Domain Understanding: How did you handle technical data (formatting grades, area units)?
 
-Potential for Relief: Would I feel confident pushing this code to production tomorrow?
+Trust: Would I feel confident pushing this code to our production environment tomorrow?
+
+Good luck! Focus on quality over quantity.
