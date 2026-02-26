@@ -12,6 +12,14 @@ The current code (`src/AnalysisDashboard.tsx`) was built under extreme time pres
 ## 🎯 2. Your Mission
 Your task is to transform this prototype into a **production-ready frontend architecture**. We are looking for a developer who takes ownership of code quality and proactively suggests clean, maintainable solutions.
 
+Setup:
+```bash
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
 ---
 
 ## 🛠️ 3. Task Packages
@@ -46,6 +54,8 @@ Abstract the communication with our backend. Create a service layer for the foll
 * **Styling:** TailwindCSS (pre-installed)
 * **Libraries:** You are free to add libraries for Charts, Icons (e.g., Lucide), or API clients (e.g., Axios). Be prepared to justify your choices.
 
+---
+
 ## 🚀 5. Setup
 To get started, run the following commands in your terminal:
 
@@ -61,9 +71,3 @@ Independence: Did you find solutions for ambiguous requirements on your own?
 Domain Understanding: How did you handle technical data (e.g., formatting grades and area units)?
 
 Trust: Would I feel confident pushing this code to our production environment tomorrow?
-```bash
-# Install dependencies
-npm install
-
-# Start the development server
-npm run dev
