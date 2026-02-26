@@ -62,12 +62,12 @@ To get started, run the following commands in your terminal:
 ---
 
 ## 📈 6. Evaluation Criteria
-We will review your results at 2:30 PM. We are specifically looking for:
+We are specifically looking for:
 
 Clean Code: Is the code readable, and does it follow "Don't Repeat Yourself" (DRY) principles?
 
 Independence: Did you find solutions for ambiguous requirements on your own?
 
-Domain Understanding: How did you handle technical data (e.g., formatting grades and area units)?
+Domain Understanding: How did you handle technical data?
 
 Trust: Would I feel confident pushing this code to our production environment tomorrow?
