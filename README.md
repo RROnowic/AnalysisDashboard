@@ -56,11 +56,6 @@ Abstract the communication with our backend. Create a service layer for the foll
 
 ---
 
-## 🚀 5. Setup
-To get started, run the following commands in your terminal:
-
----
-
 ## 📈 6. Evaluation Criteria
 We are specifically looking for:
 
