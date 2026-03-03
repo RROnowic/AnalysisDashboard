@@ -1,6 +1,6 @@
 # 🏗️ Trial Day Challenge: Infrastructure Dashboard Refactoring
 
-Welcome to our team! We are excited to see your approach to modern frontend architecture and your ability to transform prototypes into production-ready code.
+We are excited to see your approach to modern frontend architecture and your ability to transform prototypes into production-ready code.
 
 ---
 
